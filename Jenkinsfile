@@ -81,8 +81,8 @@ def deploy(environment) {
 		System.exit(0)
 	}
 
-	sh "docker ps -f name=${containerName} -q | xargs -r docker stop"
-	sh "docker ps -a -f name=${containerName} -q | xargs -r docker rm"
+	// sh "docker ps -f name=${containerName} -q | xargs --no-run-if-empty docker stop"
+	// sh "docker ps -a -f name=${containerName} -q | xargs -r docker rm"
 	sh "docker run -d -p ${port}:5000 --name ${containerName} django-on-jenkins/myapp:${BUILD_NUMBER}"
 
 }
