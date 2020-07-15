@@ -5,6 +5,7 @@ FROM alpine:3.7
 RUN apk add --update python3
 
 # Install Python modules needed by the Python app
+COPY . /usr/src/app/
 RUN pip3 install --no-cache-dir -r /usr/src/app/requirements.txt
 
 # Tell the port number the container should expose
