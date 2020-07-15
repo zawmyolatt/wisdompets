@@ -104,5 +104,6 @@ def runUnittests() {
 
 
 def runUAT(port) {
+    // sh "python3 manage.py runserver ${port}"
 	sh "tests/runUAT.sh ${port}"
 }

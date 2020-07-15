@@ -12,4 +12,4 @@ RUN pip3 install --no-cache-dir -r /usr/src/app/requirements.txt
 EXPOSE 5000
 
 # Run the application
-CMD ["python3", "/usr/src/app/manage.py", "startserver"]
+CMD ["python3", "/usr/src/app/manage.py", "runserver"]
